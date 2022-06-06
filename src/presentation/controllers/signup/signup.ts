@@ -30,12 +30,8 @@ export class SignUpController implements Controller {
         password
       })
       return {
-        statusCode: 201,
-        body: {
-          id: account.id,
-          name: account.name,
-          email: account.email
-        }
+        statusCode: 200,
+        body: account
       }
     } catch (error) {
       return serverError()
