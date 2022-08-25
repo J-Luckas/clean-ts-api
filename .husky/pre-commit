@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-eslint .
+eslint 'src/**' --fix
 npx lint-staged
 npm run test:staged
